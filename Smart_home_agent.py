@@ -1,4 +1,4 @@
-# Sensor input functions (manual input simulation)
+
 def get_temperature():
     return float(input("Enter temperature (°C): "))
 
@@ -8,23 +8,23 @@ def get_light_intensity():
 def get_current_hour():
     return int(input("Enter current hour (0-23): "))
 
-# Smart agent decision logic
+
 def smart_home_agent(temperature, light_intensity, hour):
-    # Initialize device states
+
     fan = "OFF"
     light = "OFF"
     heater = "OFF"
 
-    # Fan control rule
+
     if temperature > 28:
         fan = "ON"
 
-    # Light control rule
-    if hour >= 19 or hour < 6:  # Night time
+
+    if hour >= 19 or hour < 6: 
         if light_intensity < 300:
             light = "ON"
 
-    # Heater control rule (winter hours only)
+
     if (6 <= hour <= 9 or 19 <= hour <= 23) and temperature < 18:
         heater = "ON"
 
@@ -34,7 +34,6 @@ def smart_home_agent(temperature, light_intensity, hour):
         "Heater": heater
     }
 
-# Main function
 def main():
     print("=== Smart Home Agent ===")
     temperature = get_temperature()
