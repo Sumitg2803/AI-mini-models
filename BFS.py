@@ -15,7 +15,7 @@ def bfs(graph, start):
     #    / \
     #   B   C
     #  / \    \
-    # D   E    F
+    # D   E    G
     #      \
     #       F
 
@@ -23,10 +23,11 @@ def bfs(graph, start):
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
-    'C': ['F'],
+    'C': ['G'],
     'D': [],
     'E': ['F'],
-    'F': []
+    'F': [],
+    'G': []
 }
 
 # Start BFS from node 'A'
